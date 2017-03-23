@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+    <script type="text/javascript">
+    function nativecalljs(){
+     document.getElementById("content").innerHTML =
+         "<br\>无参方法运行了";
+    }
+
+    function nativecalljs2(arg){
+    document.getElementById("content").innerHTML =
+         ("<br\>"+arg);
+    }
+    </script>
+</head>
+<body bgcolor="#E6E6FA">
+START<br/>
+<h1>
+    <div id="content">原始内容</div>
+</h1>
+<br/>
+<input type="button" value="让android显示一个Toast" onclick="window.android.jscallnative()"/>
+<br/><br/>
+<input type="button" value="让android显示一个带参Toast"
+       onclick="window.android.jscallnative('有参方法')"/>
+<br/>END
+</body>
+</html>
